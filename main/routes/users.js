@@ -1,0 +1,17 @@
+const express = require('express');
+const path = require("path");
+const router = express.Router();
+router.get('/', (req, res) => {
+    res.send('Hello World! From the users.js router');
+});
+
+
+// router.get('/', function (req, res) {
+//     const fileName = 'index.html';
+//     const options = {
+//         root: path.join(__dirname)
+//     };
+//     res.sendFile(fileName, options);
+// });
+
+module.exports = router;
