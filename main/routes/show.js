@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 router.get('/', function (req, res) {
-    const fileName = 'show.html';
+    const fileName = 'views/show.ejs.html';
     const options = {
         root: path.join(__dirname)
     };

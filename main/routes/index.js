@@ -6,12 +6,21 @@ const router = express.Router();
 // });
 
 
-router.get('/', function (req, res) {
-    const fileName = 'index.html';
-    const options = {
-        root: path.join(__dirname)
-    };
-    res.sendFile(fileName, options);
+// router.get('/', function (req, res) {
+//     const fileName = 'views/index.ejs.html';
+//     const options = {
+//         root: path.join(__dirname)
+//     };
+//     res.sendFile(fileName, options);
+// });
+
+router.get('/', (req, res) => {
+    res.render('index');
 });
+
+
+const userRoutes = require('./users');
+router.use('/users', userRoutes);
+
 
 module.exports = router;
