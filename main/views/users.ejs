@@ -10,5 +10,9 @@
 <h1>John Doe</h1>
 <p>Email: john@example.com</p>
 <a href="/">Back to Users</a>
+<% for (var i = 0; i < users.length; i++) { %>
+    <p><%= users[i].name %></p>
+<% } %>
+
 </body>
 </html>

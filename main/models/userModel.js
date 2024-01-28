@@ -5,17 +5,20 @@ const users= [
     {
         id: 1,
         name: 'enci',
-        favecolor: 'yellow'
+        favecolor: 'yellow',
+        balding: "no"
     },
     {
         id: 2,
         name: 'alek',
         favecolor: 'green',
+        balding: "no"
     },
     {
         id: 3,
         name: 'morgan',
-        favecolor: 'blue'
+        favecolor: 'blue',
+        balding: "yes"
     }
 ]
 
@@ -26,11 +29,15 @@ function getUsers(){
 
 //sends 1 user
 function getUser(id){
-    let user = users.find(element=> element.id== id)
-    return user;
-}
+    let user = users.find(element=> element.id === parseInt(id))
+    if(typeof user === 'undefined') {
+        return {error: 'user not found'};
+    }else{
+            return user;
+        }
+    }
 function updateUserData(data, id){
-    let user = users.find(element=> element.id== id)
+    let user = users.find(element=> element.id === id)
     user.name= data.name;
     user.favecolor= data.favecolor;
     return user;

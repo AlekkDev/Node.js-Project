@@ -1,3 +1,6 @@
 # Node.js Project
  
-Collaborator: fat old balding swede
+Authors:
+Alek,
+Morgan,
+Eniko

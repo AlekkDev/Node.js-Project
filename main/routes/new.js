@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 // router.get('/', function (req, res) {
-//     const fileName = 'views/new.ejs';
+//     const fileName = 'views/create.ejs';
 //     const options = {
 //         root: path.join(__dirname)
 //     };

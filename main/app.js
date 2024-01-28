@@ -1,9 +1,13 @@
 const http = require('http');
 const express = require('express');
+const ejs= require('ejs')
+const path = require('path');
 const app = express();
 const port = 3000;
-const path = require('path');
-const ejs= require('ejs')
+
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs')
 
 
 const indexRouter = require('./routes/index');
@@ -13,24 +17,14 @@ const editRouter = require('./routes/edit');
 const usersRouter = require('./routes/users');
 
 
-app.use('/index', indexRouter);
-app.use('/show', showRouter);
-app.use('/new', newRouter);
-app.use('/edit', editRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
+// app.use('/show', showRouter);
+// app.use('/new', newRouter);
+// app.use('/edit', editRouter);
+// app.use('/users', usersRouter);
 
 
-// const server = http.createServer((req, res) => {
-//     res.statusCode = 200;
-//     res.setHeader('Content-Type', 'text/html');
-//     const fs = require('fs');
-//     fs.readFile('helloworld.html', (err, data) => {
-//         res.end(data);
-//     });
-// });
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs')
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
