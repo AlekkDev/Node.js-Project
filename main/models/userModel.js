@@ -5,20 +5,17 @@ const users= [
     {
         id: 1,
         name: 'enci',
-        favecolor: 'yellow',
-        balding: "no"
+        favecolor: 'yellow'
     },
     {
         id: 2,
         name: 'alek',
-        favecolor: 'green',
-        balding: "no"
+        favecolor: 'green'
     },
     {
         id: 3,
         name: 'morgan',
-        favecolor: 'blue',
-        balding: "yes"
+        favecolor: 'blue'
     }
 ]
 
@@ -36,10 +33,19 @@ function getUser(id){
             return user;
         }
     }
-function updateUserData(data, id){
-    let user = users.find(element=> element.id === id)
-    user.name= data.name;
-    user.favecolor= data.favecolor;
+
+//this function will work for EDITING user data with a few modifications, but not for creating a new user, see below
+// function updateUserData(data, id){
+//     let user = users.find(element=> element.id === id)
+//     user.name= data.name;
+//     user.favecolor= data.favecolor;
+//     return user;
+// }
+
+//function for creating/adding new user
+function updateUserData(data) {
+    let user = {id: data.id, name: data.name, favecolor: data.color};
+    users.push(user);
     return user;
 }
 

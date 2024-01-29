@@ -13,6 +13,12 @@
 <% for (var i = 0; i < users.length; i++) { %>
     <p><%= users[i].name %></p>
 <% } %>
+<!--Improved way of iterating through all users below, gotta change the styling or how we display-->
+<% users.forEach(function(user) { %>
+    <h1> <%= user.name %></h1>
+    <p> <%= user.favecolor %></p>
+<% }); %>
+<h1></h1>
 
 </body>
 </html>

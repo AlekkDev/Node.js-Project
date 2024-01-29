@@ -1,4 +1,5 @@
-
+const express = require("express");
+const router = express.Router();
 const userModel= require("../models/userModel");
 
 function getUsers(req, res, next) {
@@ -13,14 +14,18 @@ res.json(user);
 }
 
 
-function updateUserData(req, res, next) {
-    //some code that updates a user
-    userModel.updateUserData(req.body, req.params.id)
-    res.send()
-}
+// function updateUserData(req, res, next) {
+//     //some code that updates a user
+//     userModel.updateUserData(req.body, req.params.id)
+//     res.send()
+// }
+
+
+
+
 
 module.exports = {
     getUsers,
-    getUser,
-    updateUserData
+    getUser
+    //updateUserData
 }
