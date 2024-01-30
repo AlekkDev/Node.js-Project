@@ -13,6 +13,14 @@ const user = userModel.getUser(parseInt(req.params.id));
 res.json(user);
 }
 
+function deleteUser(req, res, next) {
+    const userId = parseInt(req.params.id);
+    userModel.deleteUser(userId);
+    res.redirect('/users');
+    next();
+}
+
+
 
 // function updateUserData(req, res, next) {
 //     //some code that updates a user
@@ -26,6 +34,7 @@ res.json(user);
 
 module.exports = {
     getUsers,
-    getUser
+    getUser,
+    deleteUser
     //updateUserData
 }

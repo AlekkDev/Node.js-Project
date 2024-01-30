@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
     <title>Edit User</title>
 </head>
 <body>
 <h1>Edit User - John Doe</h1>
-<form action="/users/1" method="post">
-    <!-- Form fields go here with pre-filled data -->
-    <button type="submit">Update User</button>
+<form action="/users/:id" method="post">
+    <label for="name">Updated name:</label>
+    <input type="text" name="name" id="name" placeholder="Name">
+    <label for="favc">Updated favorite color:</label>
+    <input type="text" name="favc" id="favc" placeholder="Color">
+    <button type="submit">Submit</button>
 </form>
 </body>
 </html>

@@ -49,8 +49,19 @@ function updateUserData(data) {
     return user;
 }
 
+function deleteUser(userId){
+    const num= users.findIndex(user => user.id === userId)
+    if (num !== -1) {
+        users.splice(num, 1);
+    }
+}
+
+
+
+
 module.exports = {
     getUsers,
     getUser,
-    updateUserData
+    updateUserData,
+    deleteUser
 }

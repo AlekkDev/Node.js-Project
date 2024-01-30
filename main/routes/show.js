@@ -6,6 +6,14 @@ const router = express.Router();
 // });
 
 
+
+
+router.get('/users', (req, res) => {
+    res.render('users');
+});
+
+module.exports = router;
+
 // router.get('/', function (req, res) {
 //     const fileName = 'views/users.ejs';
 //     const options = {
@@ -13,9 +21,3 @@ const router = express.Router();
 //     };
 //     res.sendFile(fileName, options);
 // });
-
-router.get('/users', (req, res) => {
-    res.render('users');
-});
-
-module.exports = router;

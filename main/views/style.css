@@ -1,0 +1,36 @@
+
+body{
+    background-color: rgba(236, 236, 124, 0.87);
+    margin: 30px;
+    padding: 30px;
+    border-style: dashed;
+    border-color: #537953;
+    font-family: "Arial Narrow";
+}
+
+button{
+    border-style: none;
+    border-radius: 10px;
+    background-color: #80d280;
+    padding: 5px;
+}
+
+#members{
+    display: flex;
+    margin-left: 20px;
+}
+
+.pic{
+    list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+    #members {
+        flex-direction: column;
+    }
+}
+
+.buttos{
+    display: flex;
+    padding: 10px;
+}

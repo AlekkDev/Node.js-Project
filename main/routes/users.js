@@ -8,20 +8,25 @@ const userModel = require("../models/userModel")
 
 router.get('/', userController.getUsers);
 router.get('/:id', userController.getUser);
+router.post('/:id/delete', userController.deleteUser);
+
 //router.post('/:id', userController.updateUserData);
 //attempting to make adding new user data possible - Morgan
 //the data received in this post request is in new.ejs, which is the form for creating a new user
+let lastId= 3
 router.post("/", (req, res) => {
     //bandaid fix for having an ID for the user, either have to iterate the users json in userModel.js for the next user.id, or can just make random IDs
     //with uuid module?
     console.log("The data being passed into POST request: ", req.body)
-    const  id = 69;
+    const  id = ++lastId;
     const name = req.body.name;
     const color = req.body.favc;
     const newUser = userModel.updateUserData({id: id, name: name, color: color});
     res.send(newUser);
     console.log("Successfully added new user with following data: ", newUser);
 });
+
+//router.post("/", userController )
 
 module.exports = router;
 

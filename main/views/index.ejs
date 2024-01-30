@@ -3,14 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
-    <title>Edit User</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Homepage</title>
 </head>
 <body>
-<h1>Edit User - John Doe</h1>
-<form action="/users/1" method="post">
+<h2>Our team</h2>
+<ul id="members">
+    <li>
+        <h4>Enikő Krisztina Bálint</h4>
+        <ul>
+            <li>ID: 22/1/0855/004</li>
+            <br>
+            <li class="pic"><img src="pics/eni.JPG" height="250px"></li>
+        </ul>
+    </li>
+    <li>
+        <h4>Morgan Nihlmar</h4>
+        <ul>
+            <li>ID: 22/1/0855/046</li>
+            <br>
+            <li class="pic"><img src="pics/morgan.JPG" height="250px"></li>
+        </ul>
+    </li>
+    <li>
+        <h4>Alek Hanušić</h4>
+        <ul>
+            <li>ID: 22/1/0855/011 </li>
+            <br>
+            <li class="pic"><img src="pics/alek.JPG" height="250px"></li>
+        </ul>
+    </li>
+</ul>
+
+<form action="/users" method="get">
     <!-- Form fields go here with pre-filled data -->
-    <button type="submit">Update User</button>
+    <button type="submit">Users</button>
 </form>
 </body>
 </html>

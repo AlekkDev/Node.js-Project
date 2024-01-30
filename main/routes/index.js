@@ -19,8 +19,8 @@ router.get('/', (req, res) => {
 });
 
 
-const userRoutes = require('./users');
-router.use('/users', userRoutes);
+//const userRoutes = require('./users');
+//router.use('/users', userRoutes);
 
 
 

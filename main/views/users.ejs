@@ -1,24 +1,33 @@
+<!-- views/users.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
-    <title>User Details</title>
+    <link rel="stylesheet" href="style.css">
+    <title>User Display</title>
 </head>
 <body>
-<h1>John Doe</h1>
-<p>Email: john@example.com</p>
-<a href="/">Back to Users</a>
-<% for (var i = 0; i < users.length; i++) { %>
-    <p><%= users[i].name %></p>
-<% } %>
-<!--Improved way of iterating through all users below, gotta change the styling or how we display-->
-<% users.forEach(function(user) { %>
-    <h1> <%= user.name %></h1>
-    <p> <%= user.favecolor %></p>
-<% }); %>
-<h1></h1>
+<div id="users-container">
+    <% users.forEach(function(user) { %>
+        <div>
+            <p>Name: <%= user.name %></p>
+            <p>Fave color: <%= user.favecolor %></p>
+
+            <div class="buttos">
+                <form action="/users/<%= user.id %>/edit" method="get">
+                    <button type="submit">Edit</button>
+                </form>
+                <form action="/users/<%= user.id %>/delete" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+
+            <hr>
+        </div>
+    <% }); %>
+</div>
 
 </body>
 </html>
