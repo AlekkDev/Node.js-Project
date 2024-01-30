@@ -10,7 +10,8 @@ router.get('/', userController.getUsers);
 router.get('/:id', userController.getUser);
 router.post('/:id/delete', userController.deleteUser);
 
-//router.post('/:id', userController.updateUserData);
+
+
 //attempting to make adding new user data possible - Morgan
 //the data received in this post request is in new.ejs, which is the form for creating a new user
 let lastId= 3
@@ -22,8 +23,8 @@ router.post("/", (req, res) => {
     const name = req.body.name;
     const color = req.body.favc;
     const newUser = userModel.updateUserData({id: id, name: name, color: color});
-    res.send(newUser);
     console.log("Successfully added new user with following data: ", newUser);
+    res.redirect('/users');
 });
 
 //router.post("/", userController )

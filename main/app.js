@@ -16,23 +16,19 @@ app.use(express.static('public'));
 app.use(express.static('views'));
 
 const indexRouter = require('./routes/index');
-const showRouter = require('./routes/show');
 const newRouter = require('./routes/new');
 const editRouter = require('./routes/edit');
 const usersRouter = require('./routes/users');
+const showRouter = require("./routes/showuser");
 
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/show', showRouter);
 app.use('/new', newRouter);
-app.use('/edit', editRouter);
+app.use('/users', editRouter);
+app.use("showuser", showRouter);
 
-//trying to figure out why the last 3 routers are not working by making a new test one below
-const testRouter = require("./routes/test");
-app.use("/test", testRouter);
-//problem was in the router files, router.get("/", etc) first parameter should always be /, not /users or /show etc
-//that wasnt working before because something was incorrectly set up in this file but I forgot what it was
+
 
 
 

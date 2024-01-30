@@ -10,7 +10,8 @@ function getUsers(req, res, next) {
 
 function getUser(req, res, next) {
 const user = userModel.getUser(parseInt(req.params.id));
-res.json(user);
+// res.json(user);
+return user;
 }
 
 function deleteUser(req, res, next) {
@@ -22,11 +23,13 @@ function deleteUser(req, res, next) {
 
 
 
-// function updateUserData(req, res, next) {
-//     //some code that updates a user
-//     userModel.updateUserData(req.body, req.params.id)
-//     res.send()
-// }
+function editUserData(req, res, next) {
+    const userId = parseInt(req.params.id);
+    console.log("This is what you wrote to edit the user data: ", req.body)
+    userModel.editUserData(req.body, userId)
+    res.redirect('/users');
+    res.send()
+}
 
 
 
@@ -35,6 +38,6 @@ function deleteUser(req, res, next) {
 module.exports = {
     getUsers,
     getUser,
-    deleteUser
-    //updateUserData
+    deleteUser,
+    editUserData
 }

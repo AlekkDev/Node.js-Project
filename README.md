@@ -10,7 +10,7 @@ For our Web technologies assignment we worked in a group of three and split the 
 
 Usage:
 
-Running the app.js (with "node app.js" in the CLI) file will lead to our homepage where our group is displayed and there is a users button which leads to the users page. Every one is fetched and displayed (without the ID) in an ejs file and each user has an Edit and a Delete button. We hardcoded some users for easier testing in the beginning but users can be added via our New User page as well. 
+Running the app.js (with "node app.js" in the CLI) file will lead to our homepage where our group is displayed. There is a users button which leads to the users page. Every user is fetched and displayed (without the ID) in an .ejs file and each user has an Edit and a Delete button. We hardcoded some users for easier testing in the beginning but users can be added via our New User page as well. 
 
 With the /:id path we showcase a single user who has the id in the url.
 
