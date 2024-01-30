@@ -17,6 +17,7 @@ return user;
 function deleteUser(req, res, next) {
     const userId = parseInt(req.params.id);
     userModel.deleteUser(userId);
+    console.log("Deleted user:", req.body)
     res.redirect('/users');
     next();
 }
@@ -30,8 +31,6 @@ function editUserData(req, res, next) {
     res.redirect('/users');
     res.send()
 }
-
-
 
 
 

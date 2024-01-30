@@ -22,12 +22,17 @@
                 <form action="/users/<%= user.id %>/delete" method="post">
                     <button type="submit">Delete</button>
                 </form>
+                <form action="/showuser/<%= user.id %>" method="get">
+                    <button type="submit">Show user info</button>
+                </form>
             </div>
 
             <hr>
         </div>
     <% }); %>
 </div>
-
+<form action="/new" method="get">
+    <button type="submit">Create new user</button>
+</form>
 </body>
 </html>
