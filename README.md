@@ -5,7 +5,7 @@ Alek,
 Morgan,
 Enikö
 
-For our Webtechnologies assignment we worked in a group of three and split the work. Alek implemented the MVC pattern for our project and created the initial structure that we worked within, as well as the routing. Morgan dealt with the rest of the routes and implemented the GET and POST request functionality so that users could be added and the list of users could be viewed. Enikö made the frontend display all our functionality and created the functions for editing and deleting user data.
+For our Web technologies assignment we worked in a group of three and split the work. Alek implemented the MVC pattern for our project and created the initial structure that we worked within, as well as the routing. Morgan dealt with the rest of the routes and implemented the GET and POST request functionality so that users could be added and the list of users could be viewed. Enikö made the frontend display all our functionality and created the functions for editing and deleting user data.
 
 
 Usage:
