@@ -28,11 +28,11 @@ function deleteUser(req, res, next) {
     next();
 }
 
-
+//function that calls the model to edit a user's data based on input from the edit form
 function editUserData(req, res, next) {
     const userId = parseInt(req.params.id);
     console.log("This is what you wrote to edit the user data: ", req.body)
-    userModel.editUserData(req.body, userId)
+    userModel.editUserData(req.body, userId) //passes a json object with keys name and favc as the data, and userID as the id
     res.redirect('/users');
     res.send()
 }
