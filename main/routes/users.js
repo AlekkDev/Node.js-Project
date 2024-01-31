@@ -9,6 +9,8 @@ const userModel = require("../models/userModel")
 router.get('/', userController.getUsers);
 router.get('/:id', userController.getUser);
 router.post('/:id/delete', userController.deleteUser);
+router.get('/showuser/', userController.getUser);
+
 
 
 

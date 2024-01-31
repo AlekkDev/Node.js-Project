@@ -26,7 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/new', newRouter);
 app.use('/users', editRouter);
-app.use("/showuser", showRouter);
+app.use('/users/showuser', showRouter);
 
 
 

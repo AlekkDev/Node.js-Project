@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Show user info</title>
 </head>
 <body>
-        <div>
-            <p>Name: <%= user.name %></p>
-            <p>Fave color: <%= user.favecolor %></p>
-        </div>
+<h1>User Information</h1>
+<p>ID: <%= user.id %></p>
+<p>Name: <%= user.name %></p>
+<p>Favorite Color: <%= user.favecolor %></p>
+
+<form action="/users" method="get">
+
+    <button type="submit">Users</button>
+</form>
 </body>
 </html>
