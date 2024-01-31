@@ -9,7 +9,10 @@ router.get('/', (req, res) => {
     res.render('showuser');
 });
 
-
+router.get('showuser/:id/', (req, res) => {
+    const user = userController.getUser(req, res);
+    res.render('showuser', {user: user});
+});
 
 router.get('/:id', userController.getUser);
 
