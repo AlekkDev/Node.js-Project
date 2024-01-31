@@ -19,12 +19,12 @@ const users= [
     }
 ]
 
-//sends all user info
+//function to retrieve all users
 function getUsers(){
     return users;
 }
 
-//sends 1 user
+//function to retrieve a user by id, if the user is not found, an error message is returned
 function getUser(id){
     let user = users.find(element=> element.id === parseInt(id))
     if(typeof user === 'undefined') {
@@ -34,7 +34,7 @@ function getUser(id){
         }
     }
 
-// edit user data function
+// edit user data function - takes in data and id, finds the user with the id and changes the name and favecolor
 function editUserData(data, id){
     let user = users.find(element=> element.id === id)
     user.name= data.name;
@@ -61,7 +61,7 @@ function deleteUser(userId){
 
 
 
-
+// export all functions so that they can be used in other files
 module.exports = {
     getUsers,
     getUser,

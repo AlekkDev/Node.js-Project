@@ -1,23 +1,25 @@
 const express = require("express");
-const router = express.Router();
-const userModel = require("../models/userModel");
 
+const userModel = require("../models/userModel");
+//function that gets all users from the model function
 function getUsers(req, res, next) {
     //some code that sends back data about all users
     const users = userModel.getUsers();
     res.render('users', {users})
 }
-
+// function that gets a single user from the model
 function getUser(req, res, next) {
     const user = userModel.getUser(parseInt(req.params.id));
 // res.json(user);
     return user;
 }
+
+//function that shows a single user from the model
 function showUser(userId) {
     const user = userModel.getUser(userId);
     return user;
 }
-
+//function that calls the model to delete a user
 function deleteUser(req, res, next) {
     const userId = parseInt(req.params.id);
     userModel.deleteUser(userId);
