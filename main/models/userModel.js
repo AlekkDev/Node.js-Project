@@ -9,7 +9,7 @@ const users= [
     },
     {
         id: 2,
-        name: 'alek',
+        name: 'alekk',
         favecolor: 'green'
     },
     {
